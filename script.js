@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Show welcome message
+    // Welcome message
     alert("Welcome to BC Marketing! Let's create something beautiful together!");
 
-    // Automatically update the year in the footer
+    // Update year in footer
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (slides.length > 0) {
-        showSlide(currentSlide); // show first image
-        setInterval(nextSlide, 3000); // every 3 seconds
+        showSlide(currentSlide);
+        setInterval(nextSlide, 3000);
     } else {
         console.warn("No slides found");
     }
@@ -76,5 +76,12 @@ document.addEventListener("DOMContentLoaded", () => {
             navLinks.classList.toggle("show");
         });
     }
-});
 
+    // Close menu button
+    const closeBtn = document.getElementById("closeMenu");
+    if (closeBtn && navLinks) {
+        closeBtn.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+    }
+});
