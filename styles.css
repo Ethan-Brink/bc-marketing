@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -253,4 +257,19 @@ body.dark-mode label {
     .hamburger {
         display: block;
     }
+}
+#closeMenu {
+    position: absolute;      /* So you can position it inside the menu */
+    top: 10px;               /* Distance from the top */
+    right: 10px;             /* Distance from the right */
+    padding: 5px 10px;       /* Smaller padding (vertical 5px, horizontal 10px) */
+    font-size: 14px;         /* Smaller font size */
+    cursor: pointer;         /* Pointer cursor on hover */
+    background-color: transparent; /* Optional: transparent background */
+    border: none;            /* Remove default border */
+    color: #ffffff;             /* Button color */
+}
+
+#closeMenu:hover {
+    color: #ffb700;             /* Darker color on hover */
 }
