@@ -96,10 +96,13 @@ if (navLinks) {
   });
 }
 
-    links.forEach(link => {
-     link.addEventListener("click", () => {
-    navLinks.classList.remove("show"); // hide menu after clicking
-  });
-});
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("a");
 
-});
+  links.forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("show"); // hide menu after clicking
+    });
+  });
+}); // ✅ <- This closes the outer addEventListener properly
+}); // End of DOMContentLoaded
