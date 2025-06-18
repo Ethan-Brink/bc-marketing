@@ -68,41 +68,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Hamburger Menu
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.getElementById("navLinks");
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
 
-if (hamburger && navLinks) {
-  hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-}
+    if (hamburger && navLinks) {
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+    }
 
-// Close menu button
-const closeBtn = document.getElementById("closeMenu");
-if (closeBtn && navLinks) {
-  closeBtn.addEventListener("click", () => {
-    navLinks.classList.remove("show");
-  });
-}
+    // Close menu button
+    const closeBtn = document.getElementById("closeMenu");
+    if (closeBtn && navLinks) {
+        closeBtn.addEventListener("click", () => {
+            navLinks.classList.remove("show");
+        });
+    }
 
-// Close menu when a link is clicked
-if (navLinks) {
-  const links = navLinks.querySelectorAll("a");
+    // Close menu when a link is clicked
+    if (navLinks) {
+        const links = navLinks.querySelectorAll("a");
 
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("show");
-    });
-  });
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll("a");
-
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      navLinks.classList.remove("show"); // hide menu after clicking
-    });
-  });
-}); // ✅ <- This closes the outer addEventListener properly
-}); // End of DOMContentLoaded
+        links.forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("show");
+            });
+        });
+    }
+});
